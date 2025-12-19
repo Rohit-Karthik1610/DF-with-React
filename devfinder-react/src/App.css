@@ -1,0 +1,238 @@
+/* ----------------------
+   BODY & CONTAINER
+------------------------*/
+body {
+    background: #0A1E3A;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;          /* Occupy full width */
+    max-width: 900px;     /* Max width on large screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----------------------
+   HEADER
+------------------------*/
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+/* ----------------------
+   ICON STYLE
+------------------------*/
+.icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #7BA6FF;
+}
+
+/* ----------------------
+   SEARCH BOX
+------------------------*/
+.search-box {
+    background: #112B54;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    flex: 1;
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: gray;
+}
+
+.search-box button {
+    background: #1976FF;
+    border: none;
+    padding: 10px 18px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ----------------------
+   PROFILE CARD
+------------------------*/
+.profile-card {
+    background: #112B54;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;  /* Limit card width */
+}
+
+/* Avatar */
+.avatar {
+    width: 100px;
+    border-radius: 50%;
+}
+
+/* HEADER BLOCK */
+.profile-header {
+    margin-left: 120px;
+    margin-top: -100px;
+}
+
+/* NEW FLEX ROW */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.username {
+    color: #7BA6FF;
+    margin-top: -8px;
+}
+
+.bio {
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+.joined {
+    color: #AFC7FF;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+/* ----------------------
+   STATS
+------------------------*/
+.stats-box {
+    background: #0A1E3A;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;   /* Wrap on smaller screens */
+    gap: 15px;
+}
+
+.stats-box .label {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.stats-box .value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ----------------------
+   INFO SECTION
+------------------------*/
+.info-section {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-item span, .info-item a {
+    margin-left: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+/* ----------------------
+   RESPONSIVE BREAKPOINTS
+------------------------*/
+
+/* Tablets: 768px and below */
+@media (max-width: 768px) {
+    .profile-header {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .top-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .joined {
+        margin-left: 0;
+    }
+
+    .stats-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr; /* Stack info items */
+        text-align: center;
+    }
+
+    .avatar {
+        margin: 0 auto;
+    }
+}
+
+/* Mobile: 480px and below */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .search-box button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 80px;
+    }
+
+    .stats-box .value {
+        font-size: 16px;
+    }
+
+    .stats-box .label {
+        font-size: 12px;
+    }
+}
